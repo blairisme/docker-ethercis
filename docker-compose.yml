@@ -13,9 +13,13 @@ services:
     # Do not start application container until postgres service is started
     depends_on:
       - postgres
-
+    # Limit memory use
+    mem_limit: 512m
+    
   postgres:
     # Build database using Dockerfile contained in postgres subfolder
     build: ./postgres
     # Name image
     image: ethercis-db
+    # Limit memory use
+    mem_limit: 24m
