@@ -23,4 +23,4 @@ services:
     # Name image
     image: ethercis-db
     # Limit memory use
-    mem_limit: 24m
+    mem_limit: 256m
