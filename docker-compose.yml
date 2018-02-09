@@ -1,7 +1,7 @@
-version: "2"
+version: "2.2"
 
 services:
-
+  # Configuration for the EHR service.
   app:
     # Build application using Dockerfile contained in application subfolder
     build: ./application
@@ -15,7 +15,8 @@ services:
       - postgres
     # Limit memory use
     mem_limit: 512m
-    
+
+  # Configuration for the postgres service. This service populates the EHR DB.
   postgres:
     # Build database using Dockerfile contained in postgres subfolder
     build: ./postgres
